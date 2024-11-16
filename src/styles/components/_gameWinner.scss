@@ -1,0 +1,29 @@
+@use '../abstracts/helpers' as *;
+
+.winning-marker {
+    @include container($max-width: 660px);
+    @include flex($justify-content: center, $align-items: center, $gap: 1rem);
+}
+
+.reset-btns {
+    @include container($max-width: 660px, $margin: 0 auto);
+    @include flex($justify-content: center, $align-items: center, $gap: 1rem);
+}
+
+#quit-game-btn {
+   @include container($max-width: 80px);
+   @include button($background-color: $silver, $padding: 1rem, $border-radius: 10px);
+   @include text($color: $dark-navy, $font-size: $fs-16px, $font-weight: $fw-700, $letter-spacing: $ls-1px);
+   box-shadow: 0px -4px 0px 0px #6B8997 inset;
+   border: none;
+   cursor: pointer;
+}
+
+#next-round-btn {
+    @include container($max-width: 150px);
+    @include button($background-color: $light-yellow, $padding: 1rem, $border-radius: 10px);
+    @include text($color: $dark-navy, $font-size: $fs-16px, $font-weight: $fw-700, $letter-spacing: $ls-1px);
+    box-shadow: 0px -4px 0px 0px #CC8B13 inset;
+    border: none;
+    cursor: pointer;
+}

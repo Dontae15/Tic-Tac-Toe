@@ -1,0 +1,111 @@
+@use '../abstracts/helpers' as *;
+
+.game-info {
+    @include container($max-width: 460px, $margin: 0 auto);
+    @include flex($justify-content: space-between, $align-items: center, $gap: 1rem);
+}
+
+.game-info-imgs {
+    @include container($max-width: 72px);
+    @include flex($justify-content: center, $align-items: center, $gap: 0.2rem);
+}
+
+.game-info-imgs img {
+    width: 25px;
+}
+
+.move-indicator {
+    @include container($max-width: 140px, $border-radius: 10px);
+    @include flex($justify-content: center, $align-items: center);
+    background-color: $semi-dark-navy;
+    box-shadow: 0px -4px 0px 0px #10212A inset;
+}
+
+#restart-game-btn {
+    @include container($max-width: 52px);
+    @include button($background-color: $silver, $padding: 1rem, $border-radius: 10px);
+    @include flex($justify-content: center, $align-items: center);
+    border: none;
+    cursor: pointer;
+}
+
+.game-board {
+   @include container($max-width: 460px);
+   @include grid($grid-template-columns: repeat(3, 1fr));
+   grid-template-rows: repeat(3, 1fr);
+   gap: 1rem;
+}
+
+.cell {
+   @include container($max-width: 140px, $border-radius: 15px);
+   @include flex($justify-content: center, $align-items: center, $gap: 1rem);
+   background-color: $semi-dark-navy;
+   box-shadow: 0px -8px 0px 0px #10212A inset;
+   height: 140px;
+}
+
+.game-stats {
+    @include container($max-width: 460px, $margin: 0 auto, $padding: 1rem);
+    @include flex($justify-content: space-between, $align-items: center, $flex-direction: row, $gap: 1rem);
+}
+
+.x-wins, .draws, .o-wins {
+    @include container($max-width: 140px, $border-radius: 15px);
+    @include flex($flex-direction: row, $justify-content: center, $align-items: center);
+    height: 72px;
+}
+
+.x-wins {
+    background-color: $light-blue;
+}
+
+.draws {
+    background-color: $silver;
+}
+
+.o-wins {
+    background-color: $light-yellow;
+}
+
+.x-wins p, .draws p, .o-wins p {
+    color: $dark-navy;
+}
+
+.x-marker {
+    @include text($color: $light-blue, $font-weight: $fw-700, $letter-spacing: $ls-1px);
+    font-size: 70px;
+}
+
+/* O marker styling */
+.o-marker {
+   @include text($color: $light-yellow, $font-weight: $fw-700, $letter-spacing: $ls-1px);
+   font-size: 70px;
+}
+
+
+.x-winning-cell {
+    background-color: $light-blue;
+    color: $dark-navy;
+}
+
+.o-winning-cell {
+    background-color: $light-yellow;
+    color: $dark-navy;
+}
+
+
+.outline-icon {
+    position: absolute;
+    width: 4rem; /* Adjust to fit your design */
+    height: 4rem;
+    pointer-events: none;
+}
+
+.disable-clicks {
+    pointer-events: none; /* Disables all mouse interactions */
+}
+
+
+.game-winner-header {
+    margin-bottom: -1rem;
+}

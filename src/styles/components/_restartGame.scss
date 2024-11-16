@@ -1,0 +1,24 @@
+@use '../abstracts/helpers' as *;
+
+.restart-btns {
+    @include container($max-width: 660px, $margin: 0 auto);
+    @include flex($justify-content: center, $align-items: center, $gap: 1rem);
+}
+
+#cancel {
+    @include container($max-width: 160px);
+    @include button($background-color: $silver, $padding: 1rem, $border-radius: 10px);
+    @include text($color: $dark-navy, $font-size: $fs-16px, $font-weight: $fw-700, $letter-spacing: $ls-1px);
+    box-shadow: 0px -4px 0px 0px #6B8997 inset;
+    border: none;
+    cursor: pointer;
+}
+
+#restart {
+    @include container($max-width: 160px);
+    @include button($background-color: $light-yellow, $padding: 1rem, $border-radius: 10px);
+    @include text($color: $dark-navy, $font-size: $fs-16px, $font-weight: $fw-700, $letter-spacing: $ls-1px);
+    box-shadow: 0px -4px 0px 0px #CC8B13 inset;
+    border: none;
+    cursor: pointer;
+}

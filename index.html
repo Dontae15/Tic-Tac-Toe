@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+        <div class="new-game-menu" id="game-menu-display">
+            <div class="game-menu-header">
+                <img src="/assets/icon-x.svg" alt="cross icon">
+                <img src="/assets/icon-o.svg" alt="circle icon">
+            </div>
+            <div class="choose-icon-container">
+                <p class="text-preset-4">Pick player 1's mark</p>
+                <div class="choose-icon">
+                    <button id="x-icon-btn" class="icon-btn">
+                        <img class="x-icon-silver" src="/public/assets/icon-x-silver.svg">
+                        <img class='x-icon-navy' src="/public/assets/icon-x-navy.svg">
+                    </button>
+                    <button id="o-icon-btn" class="icon-btn">
+                        <img class="o-icon-silver" src="/public/assets/icon-o-silver.svg">
+                        <img class="o-icon-navy" src="/public/assets/icon-o-navy.svg">
+                    </button>
+                </div>
+                <p class="text-preset-5">Remember: X Goes First</p>
+            </div>
+            <div class="game-menu-btns">
+                <button class="primary-btn primary-btn-1" id="cpu-btn">NEW GAME (VS CPU)</button>
+                <button class="primary-btn primary-btn-2" id="pvp-btn">NEW GAME (VS PLAYER)</button>
+            </div>
+        </div>
+
+
+        <div id="game-board-display">
+            <div class="game-info">
+                <div class="game-info-imgs">
+                    <img src="/public/assets/icon-x.svg">
+                    <img src="/public/assets/icon-o.svg">
+                </div>
+                <div class="move-indicator">
+                    <p class="text-preset-4 marker-indicator"></p>
+                </div>
+                <button id="restart-game-btn">
+                    <img src="/public/assets/icon-restart.svg">
+                </button>
+            </div>
+            <div class="game-board"></div>
+            
+            <div class="game-stats">
+                <div class="x-wins">
+                    <p class="text-preset-5 x-wins-text"></p>
+                    <p class="text-preset-5 wins-amount"></p>
+            
+                </div>
+                <div class="draws">
+                    <p class="text-preset-5 draws-text"></p>
+                    <p class="text-preset-5 draws-amount"></p>
+                </div>
+                <div class="o-wins">
+                    <p class="text-preset-5 o-wins-text"></p>
+                    <p class="text-preset-5 o-wins-amount"></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="game-winner-display">
+            <p class="text-preset-1 game-winner-header"></p>
+            <div class="winning-marker">
+                <img class="winning-icon">
+                <h2 class="text-preset-1 winning-text"></h2>
+            </div>
+            <div class="reset-btns">
+                <button id="quit-game-btn">Quit</button>
+                <button id="next-round-btn">Next Round</button>
+            </div>
+        </div>
+
+        <div id="restart-game-display">
+            <h1 class="text-preset-1">Restart Game?</h1>
+            <div class="restart-btns">
+                <button class="text-preset-4" id="cancel">No, cancel</button>
+                <button class="text-preset-4" id="restart">Yes, restart</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    <script type="module" src="/src/js/main.js"></script>
+
+</body>
+</html>

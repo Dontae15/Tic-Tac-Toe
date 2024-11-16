@@ -1,0 +1,38 @@
+@use 'variables' as *;
+
+@mixin container($max-width: 1440px, $margin: 0, $padding: 0, $border-radius: 0) {
+    max-width: $max-width;
+    width: 100%;
+    margin: $margin;
+    padding: $padding;
+    border-radius: $border-radius;
+}
+
+@mixin flex($flex-direction: row, $align-items: center, $justify-content: center, $gap: 1rem) {
+    display: flex;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    gap: $gap;
+}
+ 
+@mixin grid($grid-template-columns: 1fr, $grid-gap: 0) {
+    display: grid;
+    grid-template-columns: $grid-template-columns;
+    grid-gap: $grid-gap;
+}
+
+@mixin text($color: $silver, $font-size: $fs-16px, $font-weight: $fw-400, $line-height: normal, $letter-spacing: normal) {
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin button($background-color: $light-yellow, $padding: 0, $border-radius: 999px) {
+    background-color: $background-color;
+    padding: $padding;
+    border-radius: $border-radius;
+}

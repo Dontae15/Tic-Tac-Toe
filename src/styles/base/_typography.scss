@@ -1,0 +1,88 @@
+@use '../abstracts/helpers' as *;
+
+.text-preset-1 {
+    @include text($font-size: $fs-40px, $font-weight: $fw-700, $letter-spacing: $ls-25px);
+    text-transform: uppercase;
+}
+
+.text-preset-2 {
+    @include text($font-size: $fs-24px, $font-weight: $fw-700, $letter-spacing: $ls-15px);
+    text-transform: uppercase;
+}
+
+.text-preset-3 {
+    @include text($font-size: $fs-20px, $font-weight: $fw-700, $letter-spacing: $ls-125px);
+    text-transform: uppercase;
+}
+
+.text-preset-4 {
+    @include text($font-size: $fs-16px, $font-weight: $fw-700, $letter-spacing: $ls-1px);
+    text-transform: uppercase;
+}
+
+.text-preset-5 {
+    @include text($font-size: $fs-14px, $font-weight: $fw-400, $letter-spacing: $ls-0875px);
+}
+
+.primary-btn {
+    @include container($max-width: 460px);
+    @include button($border-radius: 0.9375rem, $padding: 1rem 1.875rem);
+    @include text($color: $dark-navy, $font-size: $fs-20px, $font-weight: $fw-700, $letter-spacing: $ls-125px);
+    border: none;
+    cursor: pointer;
+}
+
+.secondary-btn {
+    @include container($max-width: 226px);
+    @include button($border-radius: 10px, $padding: 1rem 1.875rem);
+    @include text($color: $dark-navy, $font-size: $fs-16px, $font-weight: $fw-700, $letter-spacing: $ls-1px);
+    border: none;
+    cursor: pointer;
+}
+
+.primary-btn-1 {
+    box-shadow: 0px -8px 0px 0px #CC8B13 inset;
+}
+
+.primary-btn-2 {
+    background-color: $light-blue;
+    box-shadow: 0px -8px 0px 0px #118C87 inset;
+}
+
+.secondary-btn-1 {
+    box-shadow: 0px -4px 0px 0px #CC8B13 inset;
+}
+
+.secondary-btn-2 {
+    background-color: $silver;
+    box-shadow: 0px -4px 0px 0px #6B8997 inset;
+}
+
+.primary-btn-1:hover {
+    background-color: $light-yellow-hover;
+}
+
+.primary-btn-2:hover {
+    background-color: $light-blue-hover;
+}
+
+.secondary-btn-1:hover {
+    background-color: $light-yellow-hover;
+}
+
+.secondary-btn-2:hover {
+    background-color: $silver-hover;
+}
+
+.restart-btn {
+    @include container($max-width: 52px);
+    @include button($background-color: $silver, $border-radius: 8px, $padding: 1rem 1.875rem);
+    @include flex($align-items: center, $justify-content: center);
+    box-shadow: 0px -4px 0px 0px #6B8997 inset;
+    border: none;
+    cursor: pointer;
+}
+
+.restart-btn:hover {
+    background-color: $silver-hover;
+}
